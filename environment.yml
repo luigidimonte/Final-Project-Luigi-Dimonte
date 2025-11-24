@@ -1,0 +1,12 @@
+name: financial-crises-project
+channels:
+  - defaults
+dependencies:
+  - python=3.13
+  - pandas
+  - numpy
+  - matplotlib
+  - yfinance
+  - seaborn
+  - scikit-learn
+  - pip
