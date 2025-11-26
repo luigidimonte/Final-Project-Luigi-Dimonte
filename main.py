@@ -17,6 +17,7 @@ sys.path.append(project_root)
 from src.data_loader import load_indices, download_and_save_indices
 from src.features import compute_features
 from src.crisis_windows import label_crisis_periods
+from src.analysis import run_analysis
 
 
 def main(download: bool = False):
@@ -45,6 +46,10 @@ def main(download: bool = False):
     print("Step 4: labeling crisis periods ...")
     labelled_data = label_crisis_periods(data_with_features)
     print("Crisis labels added. \n")
+    print("Step 5: running analysis and saving results ...")
+    run_analysis(labelled_data)
+    print("Analysis completed.\n")
+
 
 
     # Placeholder for future steps
