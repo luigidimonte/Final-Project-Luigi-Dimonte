@@ -1,10 +1,13 @@
 """
 Data loading and downloading utilities for the Financial Crises Project.
 """
-
-import os
+from pathlib import Path
 import pandas as pd
 import yfinance as yf
+
+#project paths (to ensure the execution in every location of the project)
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+DATA_DIR = PROJECT_ROOT / "data" / "raw"
 
 # Mapping of index names to Yahoo Finance tickers
 INDICES = {
@@ -13,8 +16,6 @@ INDICES = {
     "STOXX50": "^STOXX50E",
     "FTSE100": "^FTSE",
 }
-
-DATA_DIR = "data/raw"
 
 
 def download_and_save_indices(start="1985-01-01", end="2025-01-01"):
