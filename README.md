@@ -19,6 +19,8 @@ The project is fully reproducible using the provided Conda environment.
 From the root of the repository, run:
 
 ```bash
+git clone https://github.com/luigidimonte/Final-Project-Luigi-Dimonte.git
 conda env create -f environment.yml
 conda activate financial-crises-project
+## Reproducing Results
 python main.py
